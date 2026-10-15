@@ -8,7 +8,7 @@ import interior from '../assets/interior.jpg';
 import structure from '../assets/structure.jpg';
 import detail from '../assets/detail.jpg';
 import renovation from '../assets/renovation.jpg';
-export const images = Object.fromEntries(Object.entries({hero,residence,office,house,construction,building,interior,structure,detail,renovation}).map(([k,v])=>[k,v.url]));
+export const images = Object.fromEntries(Object.entries({hero,residence,office,house,construction,building,interior,structure,detail,renovation}).map(([k,v])=>[k,v]));
 export const paths = ['/', '/about', '/services', '/projects', '/gallery', '/contact'];
 export const defaultData = {
  company: { name:'INFRAVISION BUILDCON LLP', description:'INFRAVISION BUILDCON LLP is focused on building construction, combining thoughtful planning, practical execution, and attention to detail to create dependable spaces. Our approach emphasizes construction quality, safety awareness, clear communication, and professional project coordination.', phone:'5135453235',email:'infravision@gmail.com',address:'' },
