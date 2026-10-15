@@ -1,13 +1,13 @@
-import hero from '../assets/hero.jpg.asset.json';
-import residence from '../assets/residence.jpg.asset.json';
-import office from '../assets/office.jpg.asset.json';
-import house from '../assets/house.jpg.asset.json';
-import construction from '../assets/construction.jpg.asset.json';
-import building from '../assets/building.jpg.asset.json';
-import interior from '../assets/interior.jpg.asset.json';
-import structure from '../assets/structure.jpg.asset.json';
-import detail from '../assets/detail.jpg.asset.json';
-import renovation from '../assets/renovation.jpg.asset.json';
+import hero from '../assets/hero.jpg';
+import residence from '../assets/residence.jpg';
+import office from '../assets/office.jpg';
+import house from '../assets/house.jpg';
+import construction from '../assets/construction.jpg';
+import building from '../assets/building.jpg';
+import interior from '../assets/interior.jpg';
+import structure from '../assets/structure.jpg';
+import detail from '../assets/detail.jpg';
+import renovation from '../assets/renovation.jpg';
 export const images = Object.fromEntries(Object.entries({hero,residence,office,house,construction,building,interior,structure,detail,renovation}).map(([k,v])=>[k,v.url]));
 export const paths = ['/', '/about', '/services', '/projects', '/gallery', '/contact'];
 export const defaultData = {
