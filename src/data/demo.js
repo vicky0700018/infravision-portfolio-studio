@@ -43,7 +43,7 @@ export const STORAGE_KEY='infravision-demo-v1';
 export function readData(storage) {
  try { const raw=storage.getItem(STORAGE_KEY); if(!raw)return cloneDefaults(); const data=JSON.parse(raw); if(!data||typeof data!=='object')return cloneDefaults(); const base=cloneDefaults(); for(const key of Object.keys(base)){ if(Array.isArray(base[key])) { if(!Array.isArray(data[key]) || data[key].some(item=>!item || typeof item!=='object' || typeof item.id!=='string')) throw new Error('Invalid data'); base[key]=data[key]; } else if(data[key] && typeof data[key]==='object' && !Array.isArray(data[key]))base[key]={...base[key],...data[key]}; } return base; }catch{return cloneDefaults();}
 }
-export function safeImage(value){ return typeof value==='string' && (/^https?:\/\//i.test(value)||value.startsWith('/__l5e/assets-v1/')) ? value : ''; }
+export function safeImage(value){ return typeof value==='string' && (/^https?:\/\//i.test(value)||/^\/(src|assets|__l5e)\//.test(value)||value.startsWith('data:image/')) ? value : ''; }
 export function validPhone(value){return /^[+\d\s().-]{7,25}$/.test(value) && value.replace(/\D/g,'').length>=7;}
 export function validEmail(value){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);}
 export const newId=()=>globalThis.crypto?.randomUUID?.() || 'id-'+Date.now()+'-'+Math.random().toString(36).slice(2);
